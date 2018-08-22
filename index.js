@@ -65,8 +65,8 @@ function createChart(forcastJson) {
   const labels = forcastJson.list.map(function(e){
     return e.dt_txt;
   });
-  const data = forcastJson.list.main.map(function(e){
-    return e.temp;
+  const data = forcastJson.list.map(function(e){
+    return e.main.temp;
   });
   var ctx = document.getElementById('WeatherChart').getContext('2d');
   var chart = new Chart(ctx, {
